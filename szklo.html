@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Szkło</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<style>
+h1 {
+	font-size: 36px;
+	font-family: times new roman;
+	text-align: center;
+	background-color: #3cc346;
+	color: black;
+	padding: 15px;
+	margin-top: 0px;
+}
+
+h3 {
+font-size: 18px;
+font-family: times new roman;
+text-align: center;
+color: #3c88dd;
+font-weight: normal;
+}
+body {
+			font-family: times new roman;
+			margin: 0;
+			padding: 0;
+		}
+
+
+button {
+font-size: 25px;
+  margin: 0;
+  color: black;
+  }
+  
+h2 {
+  font-size: 28px;
+  margin: 0;
+  color: black;
+}
+
+p {
+  margin: 5px 0;
+}
+
+header {
+	font-family: times new roman;
+	font-style: italic, underline;
+	font-size: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-bottom: 0px;
+	position: relative;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #02572c;
+}
+
+a {
+	font-size: 18px;
+	font-weight: normal;
+	color: black;
+	font-style: bold;
+}
+
+.container {
+  width: 1200px;
+  margin: 0px;
+  background-color: #fff;
+  padding: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  display: inline-block;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.section-title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.section-content {
+  margin-left: 20px;
+}
+
+.button-paper {
+	background-color: #77ace7;
+  border-color: black;
+  border-width: 10px;
+  align: right;
+  color: black;
+  position: fixed;
+  padding: 20px 100px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+}
+
+.button-tworzywa {
+	background-color: #ffff70;
+  border-color: black;
+  border-width: 10px;
+  color: black;
+position: fixed;
+  padding: 20px 58px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+ margin: 10px;
+ margin-top: 78px;
+}
+
+.button-szklo {
+	background-color: #6cd274;
+  border-color: black;
+  border-width: 10px;
+  color: black;
+  position: fixed;
+  padding: 20px 103px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+ margin: 10px;
+  margin-top: 149px;
+}
+
+.button-bio {
+	background-color: #d66b00;
+  border-color: black;
+  border-width: 10px;
+  color: white;
+  position: fixed;
+  padding: 20px 39px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+ margin: 10px;
+  margin-top: 220px;
+}
+
+.button-quiz {
+	background-color: #C0C0C0;
+  border-color: black;
+  border-width: 10px;
+  color: black;
+  position: fixed;
+  padding: 20px 106px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+margin: 10px;
+  margin-top: 290px;
+}
+
+.collapsible {
+  background-color: #3cc346;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 17px;
+  font-family: times new roman;
+}
+
+.active, .collapsible:hover {
+  background-color: #6cd274;
+  color: black;
+}
+
+.content {
+  padding: 0 20px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+.collapsible:after {
+  content: '+';
+  font-size: 26px;
+  color: black;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: '-'; 
+  font-size: 30px;
+}
+
+footer {
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+</style>
+
+<body>
+<header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Strona główna</a></li>
+		  <li><a href="papier.html">Papier</a></li>
+          <li><a href="tworzywa.html">Tworzywa sztuczne</a></li>
+		  <li><a href="szklo.html">Szkło</a></li>
+		  <li><a href="bio.html">Odpady biodegradowalne</a></li>
+		  <li><a href="quiz.html">Quiz</a></li>
+            </ul>
+      </nav>
+    </header>
+	
+  <div class="container">
+    <h1>Szkło</h1>
+
+    <div class="section">
+      <h2 class="section-title">Recykling szkła</h2><br/>
+      <div class="section-content">
+        <p>Recykling szkła polega na wykorzystaniu stłuczki szklanej (pozyskanej z odpadów szklanych) do produkcji zupełnie nowych szklanych opakowań. Szkło wrzucamy do zielonego pojemnika.<br/>
+
+Szkło jest bardzo cennym surowcem wtórnym przyczyniającym się do ochrony zasobów naturalnych. <br/><br/>Wtórne wykorzystanie szkła jest bardzo ważne, zarówno pod względem ekologicznym jak i ekonomicznym i niesie za sobą szereg niepodważalnych zalet:<br/>
+
+* zmniejsza ilość odpadów na wysypiskach, szkło rozkłada się 4000 lat albo nigdy,<br/>
+* obniża zapotrzebowanie na surowce, zmniejszając tym samym eksploatację złóż naturalnych (piasku),<br/>
+* tona odpadów szklanych = oszczędność tony piasku kwarcowego,<br/>
+* oszczędność energii - niższa temperatura topnienia niż w przypadku piasku kwarcowego,<br/>
+* przetwarzane szkło nie traci na jakości – w pełni zachowuje swoje właściwości.
+
+        </p>
+      </div>
+	  </div>
+	  <div class="section">
+      <h2 class="section-title">Jak segregować szkło?</h2><br/>
+      <div class="section-content">
+<button type="button" class="collapsible">Co można segregować jako szkło?</button>
+<div class="content">
+  <p>Do zielonego pojemnika możemy wrzucać: szklane butelki po napojach i żywności, szklane butelki po alkoholu, słoiki szklane, szklane opakowania po kosmetykach (jeżeli nie są wykonane z trwałe połączonych kilku surowców) oraz inne opakowania ze szkła białego.
+
+</p>
+</div>
+<button type="button" class="collapsible">Czego nie powinno się segregować jako szkło?</button>
+<div class="content">
+  <p>Nie powinniśmy wrzucać: porcelany i ceramiki, doniczek, żarówek i lamp neonowych, fluorestycznych i rtęciowych, szkła stołowe, okularowe, i żaroodporne, fajansu, ekranów i lamp telewizyjnych, luster i szyb samochodowych.
+  </p>
+</div>
+</div>
+</div>
+</div>
+
+ 
+  <a href="papier.html" class="button-paper">Papier</a>
+  <a href="tworzywa.html" class="button-tworzywa">Tworzywa&nbsp;sztuczne</a>
+  <a href="szklo.html" class="button-szklo">Szkło</a>
+  <a href="bio.html" class="button-bio">Odpady&nbsp;biodegradowalne</a>
+  <a href="quiz.html" class="button-quiz">Quiz</a> 
+  
+  
+
+ 
+ <script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+<footer> autorzy: Alicja Krakowiak, Malwina Krajewska, Zuzanna Kołodziejek 1IBa</footer>
+</body>
+</html>

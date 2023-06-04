@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz</title>
+  <style>
+    .selected {
+      background-color: #adc5b3;
+    }
+
+h1 {
+	font-size: 36px;
+	font-family: times new roman;
+	text-align: center;
+	background-color: #02572c;
+	color: #fff;
+	padding: 15px;
+	margin-top: 0px;
+}
+
+h3 {
+font-size: 18px;
+font-family: times new roman;
+text-align: center;
+color: #02572c;
+font-weight: normal;
+}
+
+body {
+			font-family: times new roman;
+			margin: 0;
+			padding: 0;
+		}
+
+button {
+font-size: 18px;
+  margin: 0;
+  color: black;
+  }
+  
+h2 {
+  font-size: 28px;
+  margin: 0;
+  color: black;
+}
+
+p {
+  margin: 5px 0;
+}
+
+header {
+	font-family: times new roman;
+	font-style: italic, underline;
+	font-size: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-bottom: 0px;
+	position: relative;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #02572c;
+}
+
+a {
+	font-size: 18px;
+	font-weight: normal;
+	color: black;
+	font-style: bold;
+}
+
+.quiz-container {
+  width: 1200px;
+  margin: 0px;
+  background-color: #fff;
+  padding: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  display: inline-block;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.section-title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.section-content {
+  margin-left: 20px;
+}
+
+.button-paper {
+	background-color: #77ace7;
+  border-color: black;
+  border-width: 10px;
+  align: right;
+  color: black;
+  position: fixed;
+  padding: 20px 100px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+}
+
+.button-tworzywa {
+	background-color: #ffff70;
+  border-color: black;
+  border-width: 10px;
+  color: black;
+position: fixed;
+  padding: 20px 58px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+ margin: 10px;
+ margin-top: 78px;
+}
+
+.button-szklo {
+	background-color: #6cd274;
+  border-color: black;
+  border-width: 10px;
+  color: black;
+  position: fixed;
+  padding: 20px 103px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+ margin: 10px;
+  margin-top: 149px;
+}
+
+.button-bio {
+	background-color: #d66b00;
+  border-color: black;
+  border-width: 10px;
+  color: white;
+  position: fixed;
+  padding: 20px 39px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+ margin: 10px;
+  margin-top: 220px;
+}
+
+.button-quiz {
+	background-color: #C0C0C0;
+  border-color: black;
+  border-width: 10px;
+  color: black;
+  position: fixed;
+  padding: 20px 106px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+margin: 10px;
+  margin-top: 290px;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+.active:after {
+  content: '-'; 
+  font-size: 30px;
+}
+
+footer {
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+  #options {
+    list-style-type: none;
+    padding: 25px 30px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+  }
+
+  #options ul {
+    margin-bottom: 10px; 
+  }
+  </style>
+</head>
+<body>
+
+<header>
+      <nav>
+        <ol>
+          <li><a href="index.html">Strona główna</a></li>
+		  <li><a href="papier.html">Papier</a></li>
+          <li><a href="tworzywa.html">Tworzywa sztuczne</a></li>
+		  <li><a href="szklo.html">Szkło</a></li>
+		  <li><a href="bio.html">Odpady biodegradowalne</a></li>
+		  <li><a href="quiz.html">Quiz</a></li>
+            </ol>
+      </nav>
+    </header>
+	
+
+<div class="quiz-container">
+    <h1>Quiz</h1>
+
+    <div class="section">
+      <h2 class="section-title" id="question"></h2><br/>
+	  
+      <div class="section-content">
+        <ul id="options"></ul>
+    <button id="Dalej" onclick="submitQuiz()">Dalej</button>
+  </div>
+      </div>
+	  </div>
+
+ 
+  <a href="papier.html" class="button-paper">Papier</a>
+  <a href="tworzywa.html" class="button-tworzywa">Tworzywa&nbsp;sztuczne</a>
+  <a href="szklo.html" class="button-szklo">Szkło</a>
+  <a href="bio.html" class="button-bio">Odpady&nbsp;biodegradowalne</a>
+  <a href="quiz.html" class="button-quiz">Quiz</a> 
+  
+ 
+   <script>
+   const quiz = [
+    {
+      question: "Co wrzucamy do niebieskiego kontenera?",
+      options: ["Tworzywa sztuczne i metale", "Papier", "Odpady biodegradowalne", "Plastik"],
+      answer: 1
+    },
+    {
+      question: "Ile butelek plastikowych potrzeba do stworzenia jednego polara?",
+    options: ["10", "50", "25", "35"],
+    answer: 3
+    },
+    {
+      question: "Do jakiego kontenera wrzucamy butelki po alkoholu?",
+      options: ["Zielonego", "Niebieskiego", "Czarnego", "Szarego"],
+      answer: 0
+    },
+    {
+      question: "Co z podanych wrzucamy do pojemnika na odpady biodegradowalne?",
+      options: ["Drewno impregnowane", "Skorupki po jajkach", "Ziemia", "Kamienie"],
+      answer: 1
+    },
+    {
+      question: "Prawda czy nie - lustra wrzucamy do zielonego kontenera.",
+      options: ["Tak", "Nie"],
+      answer: 1
+    }
+  ];
+
+  let currentQuestion = 0;
+  let score = 0;
+
+  function displayQuestion() {
+    const questionElement = document.getElementById("question");
+    const optionsElement = document.getElementById("options");
+    const submitButton = document.getElementById("submit");
+
+    optionsElement.innerHTML = "";
+
+    questionElement.textContent = quiz[currentQuestion].question;
+
+    for (let i = 0; i < quiz[currentQuestion].options.length; i++) {
+      const option = document.createElement("li");
+      option.textContent = quiz[currentQuestion].options[i];
+      option.addEventListener("click", selectOption);
+      optionsElement.appendChild(option);
+    }
+
+    submitButton.disabled = true;
+  }
+
+  function selectOption(event) {
+    const selectedOption = event.target;
+    const options = document.getElementsByTagName("li");
+
+    for (let i = 0; i < options.length; i++) {
+      options[i].classList.remove("selected");
+    }
+
+    selectedOption.classList.add("selected");
+
+    const submitButton = document.getElementById("submit");
+    submitButton.disabled = false;
+  }
+
+  function submitQuiz() {
+    const selectedOption = document.querySelector(".selected");
+    if (selectedOption) {
+      const selectedAnswer = Array.from(selectedOption.parentNode.children).indexOf(selectedOption);
+
+      if (selectedAnswer === quiz[currentQuestion].answer) {
+        score++;
+      }
+
+      selectedOption.classList.remove("selected");
+    }
+
+    currentQuestion++;
+
+    if (currentQuestion < quiz.length) {
+      displayQuestion();
+    } else {
+      const quizContainer = document.getElementsByClassName("quiz-container")[0];
+      quizContainer.innerHTML = `<h1>Twój wynik: ${score}/${quiz.length}</h1>`;
+    }
+  }
+
+  displayQuestion();
+</script>
+ 
+  <footer> autorzy: Alicja Krakowiak, Malwina Krajewska, Zuzanna Kołodziejek 1IBa</footer>
+</body>
+</html>
